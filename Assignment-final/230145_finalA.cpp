@@ -199,3 +199,43 @@ int main(){
     
     return 0;
 }
+
+/*
+[Running] cd "/Users/anishananda/Desktop/C++/Sudoku solver/Graph_Theory_Powered_Sudoku_Solver/Assignment-final/" && g++ 230145_finalA.cpp -o 230145_finalA && "/Users/anishananda/Desktop/C++/Sudoku solver/Graph_Theory_Powered_Sudoku_Solver/Assignment-final/"230145_finalA
+230145_finalA.cpp:112:22: warning: range-based for loop is a C++11 extension [-Wc++11-extensions]
+    for(int neighbor : graph[node]){
+                     ^
+1 warning generated.
+Challenge...
++-------+-------+-------+
+| . . . | 4 . . | . . . | 
+| 4 . 9 | . . 6 | 8 7 . | 
+| . . . | 9 . . | 1 . . | 
++-------+-------+-------+
+| 5 . 4 | . 2 . | . . 9 | 
+| . 7 . | 8 . 4 | . 6 . | 
+| 6 . . | . 3 . | 5 . 2 | 
++-------+-------+-------+
+| . . 1 | . . 7 | . . . | 
+| . 4 3 | 2 . . | 6 . 5 | 
+| . . . | . . 5 | . . . | 
++-------+-------+-------+
+
+Solution...
++-------+-------+-------+
+| 1 8 5 | 4 7 3 | 9 2 6 | 
+| 4 2 9 | 5 1 6 | 8 7 3 | 
+| 3 6 7 | 9 8 2 | 1 5 4 | 
++-------+-------+-------+
+| 5 3 4 | 6 2 1 | 7 8 9 | 
+| 9 7 2 | 8 5 4 | 3 6 1 | 
+| 6 1 8 | 7 3 9 | 5 4 2 | 
++-------+-------+-------+
+| 2 5 1 | 3 6 7 | 4 9 8 | 
+| 7 4 3 | 2 9 8 | 6 1 5 | 
+| 8 9 6 | 1 4 5 | 2 3 7 | 
++-------+-------+-------+
+
+
+[Done] exited with code=0 in 1.422 seconds
+*/
