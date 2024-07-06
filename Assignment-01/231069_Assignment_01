@@ -1,0 +1,51 @@
+// My roll no. is 231069, hence, I will start from 9th node.
+
+#include <iostream>
+#include <list>
+#include <map>
+
+using namespace std;
+
+class graph{
+    public :
+    map<int, bool> visited;
+    map<int, list<int> > adjacency_list;
+    int num;
+    graph(){
+        cout << "How many links do you have ?";
+        cin >> num;
+    }
+    int a, b;
+    
+    void enter_graph(){
+        for(int i=0; i<num; i++){
+            cin >> a >> b;
+            adjacency_list[a].push_back(b);
+            adjacency_list[b].push_back(a);
+        }
+    }
+
+    void DFS(int find); 
+};
+
+int main()
+{
+    graph g;
+    g.enter_graph();
+    cout << "Order of traversal :" << endl;
+    g.DFS(9);
+    return 0;
+}
+
+void graph::DFS(int node)
+{
+    visited[node] = true;
+    cout << node << " ";
+ 
+    // Recur for all the vertices adjacent
+    // to this vertex
+    list<int>::iterator i;
+    for (i=adjacency_list[node].begin() ;  i!=adjacency_list[node].end() ;  i++)
+        if (!visited[*i])
+            DFS(*i);
+}
